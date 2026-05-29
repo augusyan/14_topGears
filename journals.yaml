@@ -1,0 +1,55 @@
+# 期刊配置 - topGears 文献计量分析
+# year_range 是闭区间 [start, end]
+year_range: [2016, 2026]
+
+# 数据源说明:
+#   - issn: OpenAlex 主键(推荐)。一个期刊可能有 print/online 两个ISSN, 任填一个均可
+#   - name: 仅用于显示和回退搜索
+#   - short: 输出表格里的简称
+#   - source: openalex | cnki (中文期刊 OpenAlex 覆盖差, 标记为 cnki 仅占位)
+
+journals:
+  # ===== 用户指定 8 个 =====
+  - short: TII
+    name: "IEEE Transactions on Industrial Informatics"
+    issn: "1551-3203"
+    source: openalex
+
+  - short: AEI
+    name: "Advanced Engineering Informatics"
+    issn: "1474-0346"
+    source: openalex
+
+  - short: AutoCon
+    name: "Automation in Construction"
+    issn: "0926-5805"
+    source: openalex
+
+  - short: CompInd
+    name: "Computers in Industry"
+    issn: "0166-3615"
+    source: openalex
+
+  - short: TITS
+    name: "IEEE Transactions on Intelligent Transportation Systems"
+    issn: "1524-9050"
+    source: openalex
+
+  - short: EAAI
+    name: "Engineering Applications of Artificial Intelligence"
+    issn: "0952-1976"
+    source: openalex
+
+  - short: CCEJ
+    name: "土木工程学报 (China Civil Engineering Journal)"
+    issn: "1000-131X"
+    source: cnki   # 中文期刊, OpenAlex 覆盖率低, 暂不抓取
+
+  - short: CJHT
+    name: "中国公路学报 (China Journal of Highway and Transport)"
+    issn: "1001-7372"
+    source: cnki   # 中文期刊, OpenAlex 覆盖率低, 暂不抓取
+
+# OpenAlex 礼貌池: 填邮箱可获得更稳定的速率
+# 详见 https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication
+openalex_email: ""  # TODO 填入你的邮箱
