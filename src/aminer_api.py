@@ -4,8 +4,14 @@ AMiner Open API Toolkit
 封装的 AMiner 开放数据平台 API, 用于学术文献检索与分析。
 
 用法:
-    from aminer_api import AMinerClient
-    client = AMinerClient(token="your_jwt_token")
+    import json, sys
+    sys.path.insert(0, r"D:\A我的研究\000_AutoResearch\14_topGears")
+    from src.aminer_api import AMinerClient
+    
+    # Token 存储在项目根目录 secrets.json（已 gitignore）
+    with open("../secrets.json") as f:
+        token = json.load(f)["aminer_token"]
+    client = AMinerClient(token)
     papers = client.search_papers(title="knowledge graph", size=10)
 
 API 端点列表:

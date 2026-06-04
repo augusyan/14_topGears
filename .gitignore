@@ -7,4 +7,5 @@ output/tables/
 output/figures/
 output/REPORT.md
 .claude/
+secrets.json
 downloads/
